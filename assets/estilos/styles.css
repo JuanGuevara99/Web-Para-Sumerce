@@ -1,0 +1,22 @@
+/* ====================================== */
+/* Estilo de letra */
+/* ====================================== */
+@import url('https://fonts.googleapis.com/css2?family=Finlandica:ital,wght@0,400..700;1,400..700&display=swap');
+
+
+body {
+    font-family: "Finlandica", sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* ====================================== */
+/* MENÚ */
+/* ====================================== */
+#menu a {
+    font-size: 18px;
+    font-weight: weight;
+    color: #3f3f3f;
+}
+
+
