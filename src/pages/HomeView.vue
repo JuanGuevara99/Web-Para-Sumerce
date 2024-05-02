@@ -1,32 +1,4 @@
 <template>
-    <nav class="navbar bg-body-tertiary p-0" id="menu">
-         <div class="container">
-             <a class="navbar-brand" href="#">
-                 <img src="/assets/img/logo2.png" alt="Para Sumercé" width="200" height="65">
-             </a>
-             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                 <span class="navbar-toggler-icon"></span>
-             </button>
-             <div class="collapse navbar-collapse" id="navbarNav">
-                 <ul class="navbar-nav">
-                     <li class="nav-item">
-                         <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-                     </li>
-                     <li class="nav-item">
-                         <a class="nav-link" href="#">Nosotros</a>
-                     </li>
-                     <li class="nav-item">
-                         <a class="nav-link" href="#">Servicios</a>
-                     </li>
-                     <li class="nav-item">
-                         <a class="nav-link" href="#">Contacto</a>
-                     </li>
-                 </ul>
-             </div>
-         </div>
-     </nav>
- 
  
      <!-- ============================================= -->
      <!-- Inicio -->

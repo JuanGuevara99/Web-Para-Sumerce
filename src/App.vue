@@ -1,20 +1,13 @@
 <template>
-  <router-view></router-view>
+  <HeaderBase></HeaderBase>
+  <main style="margin-top:80px;">
+    <router-view></router-view>
+  </main>
 </template>
 <script setup>
+import HeaderBase from './components/HeaderBase.vue';
 </script>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
+
 </style>
