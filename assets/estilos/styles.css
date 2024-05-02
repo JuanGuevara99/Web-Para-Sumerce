@@ -49,11 +49,37 @@ body {
   color: #EB9938  !important;
 }
 
+
+
+
+/* ====================================== */
+/* SERVICIOS */
+/* ====================================== */
+
+/* Imagenes servicios */
+.img-servicios img {
+    width: 180px;
+    height: 180px;
+}
+
+.servicio-fila {
+    text-align: center;
+}
+
+
+
 /* ====================================== */
 /* MEDIA QUERIES PANTALLA PEQUEÑA */
 /* ====================================== */
 @media (max-width: 768px) {
+    /* Nosotros */
     #nosotros {
         width: 80% !important;
+    }
+
+    /* Servicios */
+    .servicio-fila {
+        width: 100% !important;
+        text-align: center;
     }
 }
