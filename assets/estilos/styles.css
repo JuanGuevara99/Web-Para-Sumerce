@@ -20,3 +20,40 @@ body {
 }
 
 
+/* ====================================== */
+/* BANNER DE IMAGENES */
+/* ====================================== */
+.carousel-inner {
+    max-width: 1400px;
+    margin: auto;
+}
+
+
+/* ====================================== */
+/* NOSOTROS */
+/* ====================================== */
+
+/* Logo */
+.logo-img2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-img2 img {
+    max-width: 50%;
+    height: auto;
+}
+
+.text-primary {
+  color: #EB9938  !important;
+}
+
+/* ====================================== */
+/* MEDIA QUERIES PANTALLA PEQUEÑA */
+/* ====================================== */
+@media (max-width: 768px) {
+    #nosotros {
+        width: 80% !important;
+    }
+}
