@@ -20,4 +20,72 @@ body {
   min-height: calc(100vh - 80px);
 }
 
+/* ====================================== */
+/* MENÚ */
+/* ====================================== */
+#menu a {
+  font-size: 18px;
+  font-weight: weight;
+  color: #3f3f3f;
+}
 
+/* ====================================== */
+/* BANNER DE IMAGENES */
+/* ====================================== */
+.carousel-inner {
+    max-width: 1400px;
+    margin: auto;
+}
+
+/* ====================================== */
+/* NOSOTROS */
+/* ====================================== */
+
+/* Logo */
+.logo-img2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-img2 img {
+  max-width: 50%;
+  height: auto;
+}
+
+.text-primary {
+color: #EB9938  !important;
+}
+
+
+/* ====================================== */
+/* SERVICIOS */
+/* ====================================== */
+
+/* Imagenes servicios */
+.img-servicios img {
+  width: 180px;
+  height: 180px;
+}
+
+.servicio-fila {
+  text-align: center;
+}
+
+
+
+/* ====================================== */
+/* MEDIA QUERIES PANTALLA PEQUEÑA */
+/* ====================================== */
+@media (max-width: 768px) {
+  /* Nosotros */
+  #nosotros {
+      width: 80% !important;
+  }
+
+  /* Servicios */
+  .servicio-fila {
+      width: 100% !important;
+      text-align: center;
+  }
+}
