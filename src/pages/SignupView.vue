@@ -29,7 +29,7 @@
                 </label>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary">Registrarse</button>
+            <button type="submit" class="btn btn-general">Registrarse</button>
             </form>
     </section>
 </template>

@@ -15,7 +15,7 @@
                   <input type="text" name="" id="" class="form-control my-4 py-2" placeholder="Username" />
                   <input type="text" name="" id="" class="form-control my-4 py-2" placeholder="Password" />
                   <div class="text-center mt-3">
-                    <button class="btn btn-primary">Login</button>
+                    <button class="btn btn-general">Login</button>
                     <router-link class="nav-link mt-4"  to="/signup"> No tienes cuenta? </router-link>
                   </div>
                 </form>
