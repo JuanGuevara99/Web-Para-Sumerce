@@ -20,6 +20,21 @@ body {
   min-height: calc(100vh - 80px);
 }
 
+a {
+  text-decoration: none;
+}
+
+ul, li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+ul {
+  margin-bottom: 0px;
+}
+
+
 /* ====================================== */
 /* MENÚ */
 /* ====================================== */
@@ -33,8 +48,8 @@ body {
 /* BANNER DE IMAGENES */
 /* ====================================== */
 .carousel-inner {
-    max-width: 1400px;
-    margin: auto;
+  max-width: 1400px;
+  margin: auto;
 }
 
 /* ====================================== */
@@ -66,13 +81,156 @@ color: #EB9938  !important;
 .img-servicios img {
   width: 180px;
   height: 180px;
+  align-items: center;
 }
 
 .servicio-fila {
   text-align: center;
 }
 
+.btn-primary {
+  background: #EB9938;
+  border-color: #1e1a15;
+}
 
+.btn-primary:hover {
+  background-color: white;
+  border-color: #1e1a15;
+  color: #1e1a15;
+}
+
+/* ====================================== */
+/* ENCUESTA */
+/* ====================================== */
+.encuesta {
+  background: #EB9938;
+  background-size: cover;
+  padding: 40px 0;
+}
+
+.encuesta .cta-title {
+  color: #fff;
+}
+
+.btn-primary:hover {
+  border-color: #1e1a15;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.encuesta .cta-text {
+  color: #fff;
+}
+
+.encuesta .cta-btn {
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 26px;
+  border-radius: 3px;
+  transition: 0.5s;
+  margin: 10px;
+  border: 3px solid #fff;
+  color: #fff;
+}
+
+.encuesta .cta-btn:hover {
+  background: #1e1a15;
+  border: 3px solid #1e1a15;
+}
+
+
+/* ====================================== */
+/* FOOTER */
+/* ====================================== */
+.footer {
+  background: #1e1a15;
+  padding-top: 90px;
+  text-align: center;
+}
+
+ul.conta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+ul.conta li {
+  color: #fff;
+  text-align: left;
+  padding-bottom: 20px;
+  font-size: 18px;
+  display: inline-flex;
+  line-height: 30px;
+}
+
+ul.conta li:last-child {
+  padding-right: 0;
+}
+
+ul.conta li i {
+  padding-right: 15px;
+  text-align: center;
+  font-size: 33px;
+  color: #fff;
+}
+
+ul.conta li a {
+  color: #fff;
+}
+
+ul.social_icon {
+  text-align: center;
+}
+
+ul.social_icon li {
+  display: inline-block;
+  margin: 0 2px;
+}
+
+ul.social_icon li a i {
+  background: #fff;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  border-radius: 20px;
+  color: #212120;
+  transition: ease-in all 0.5s;
+}
+
+ul.social_icon li a i:hover {
+  color: #EB9938;
+  background: #fff;
+  transition: ease-in all 0.5s;
+}
+
+.copyright {
+  margin-top: 35px;
+  padding-bottom: 25px;
+}
+
+.copyright p {
+  border-top: #909090 solid 1px;
+  color: #fff;
+  font-size: 17px;
+  line-height: 22px;
+  text-align: center;
+  padding-top: 25px;
+  font-weight: normal;
+}
+
+.copyright a {
+  color: #fff;
+}
+
+.copyright a:hover {
+  color: #EB9938;
+}
 
 /* ====================================== */
 /* MEDIA QUERIES PANTALLA PEQUEÑA */
@@ -85,7 +243,7 @@ color: #EB9938  !important;
 
   /* Servicios */
   .servicio-fila {
-      width: 100% !important;
+      width: 90% !important;
       text-align: center;
   }
 }

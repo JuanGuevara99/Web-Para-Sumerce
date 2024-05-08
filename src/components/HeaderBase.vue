@@ -5,7 +5,6 @@
         <router-link class="nav-link" to="/"> 
             <img src="/assets/img/logo2.png" alt="Para Sumercé" width="200" height="65">
         </router-link>
-        
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -17,25 +16,25 @@
       </div>
       <div class="offcanvas-body">
         <ul class="navbar-nav">
-                     <li class="nav-item">
-                        <router-link class="nav-link" @click="closeSideBar('home')" to="/"> Inicio </router-link>
-                     </li>
-                     <li class="nav-item">
-                         <a data-bs-dismiss="offcanvas" class="nav-link" href="">Nosotros</a>
-                     </li>
-                     <li class="nav-item">
-                         <a data-bs-dismiss="offcanvas" class="nav-link" href="#">Servicios</a>
-                     </li>
-                     <li class="nav-item">
-                         <a data-bs-dismiss="offcanvas" class="nav-link" href="#">Contacto</a>
-                     </li>
-                     <li class="nav-item">
-                        <a data-bs-dismiss="offcanvas" @click="closeSideBar('login')" class="nav-link" href="">Iniciar sesión</a>
-                     </li>
-                     <li class="nav-item">
-                        <a data-bs-dismiss="offcanvas" @click="closeSideBar('signup')" class="nav-link" href="">Registrarse</a>
-                     </li>
-                 </ul>
+            <li class="nav-item">
+                <a data-bs-dismiss="offcanvas" @click="closeSideBar('home')" class="nav-link" href="">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a data-bs-dismiss="offcanvas" class="nav-link" href="">Nosotros</a>
+            </li>
+            <li class="nav-item">
+                <a data-bs-dismiss="offcanvas" class="nav-link" href="#">Servicios</a>
+            </li>
+            <li class="nav-item">
+                <a data-bs-dismiss="offcanvas" class="nav-link" href="#">Contacto</a>
+            </li>
+            <li class="nav-item">
+            <a data-bs-dismiss="offcanvas" @click="closeSideBar('login')" class="nav-link" href="">Iniciar sesión</a>
+            </li>
+            <li class="nav-item">
+            <a data-bs-dismiss="offcanvas" @click="closeSideBar('signup')" class="nav-link" href="">Registrarse</a>
+            </li>
+        </ul>
       </div>
     </div>
   </div>
