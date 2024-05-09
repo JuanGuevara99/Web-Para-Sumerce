@@ -20,13 +20,13 @@
                 <a data-bs-dismiss="offcanvas" @click="closeSideBar('home')" class="nav-link" href="">Inicio</a>
             </li>
             <li class="nav-item">
-                <a data-bs-dismiss="offcanvas" class="nav-link" href="">Nosotros</a>
+                <a data-bs-dismiss="offcanvas"  @click="scrollToSection('about')" class="nav-link" href="">Nosotros</a>
             </li>
             <li class="nav-item">
-                <a data-bs-dismiss="offcanvas" class="nav-link" href="#">Servicios</a>
+                <a data-bs-dismiss="offcanvas"  @click="scrollToSection('services')" class="nav-link" href="#">Servicios</a>
             </li>
             <li class="nav-item">
-                <a data-bs-dismiss="offcanvas" class="nav-link" href="#">Contacto</a>
+                <a data-bs-dismiss="offcanvas" @click="scrollToSection('contacto')" class="nav-link" href="#">Contacto</a>
             </li>
             <li class="nav-item">
             <a data-bs-dismiss="offcanvas" @click="closeSideBar('login')" class="nav-link" href="">Iniciar sesión</a>
@@ -45,8 +45,17 @@ import { useRouter } from 'vue-router';
 
 const router = useRouter();
 
-const closeSideBar = ( page ) =>{
-    router.push({name: page})
+// Función para desplazarse a una sección específica de la página
+const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
+// Función para cerrar la barra lateral
+const closeSideBar = (page) => {
+    router.push({ name: page });
 }
 </script>
 <style lang="">

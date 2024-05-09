@@ -3,7 +3,81 @@
      <!-- ============================================= -->
      <!-- Inicio -->
      <!-- ============================================= -->
-     <div id="carouselExampleDark" class="carousel slide" data-bs-ride="carousel">
+     
+    
+    <!-- ============================================= -->
+    <!-- NOSOTROS -->
+    <!-- ============================================= -->
+    <section id="about" >
+        <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-md-6">
+            <div class="about-img">
+                <img src="/assets/img/logo2.png" alt="">
+            </div>
+            </div>
+
+            <div class="col-lg-7 col-md-6">
+            <div class="about-content">
+                <h1 class="text-center fw-bold p-4">¿QUIÉNES <span class="text-primary">SOMOS?</span></h1>
+                <h3>Somos una empresa boyacense, impulsando a pequeños empresarios hacia el avance digital con soluciones personalizadas.</h3>
+                <p>Para Sumercé es una empresa boyacense dedicada a impulsar a pequeños empresarios hacia el progreso digital. Nos destacamos por ofrecer soluciones personalizadas que se adaptan a las necesidades únicas de cada cliente. Trabajamos de cerca con nuestros clientes para garantizar resultados efectivos y sostenibles en el mundo en línea.</p>
+                <p>Queremos mostrar nuestro departamento con su diversidad de productos. Desde artículos artesanales y alimentos frescos hasta moda y tecnología, nuestra plataforma ofrecerá una amplia gama de productos de alta calidad directamente desde los productores locales. Para Sumercé es la plataforma perfecta para quienes buscan productos auténticos y confiables.</p>
+                <ul>
+                <li><i class="ri-checkbox-circle-line"></i> Desarrollo web personalizado.</li>
+                <li><i class="ri-checkbox-circle-line"></i> Estamos realizando nuestra Plataforma e-commerce con productos locales de calidad.</li>
+                <li><i class="ri-checkbox-circle-line"></i> Gestión de redes sociales y optimización SEO.</li>
+                </ul>
+            </div>
+            </div>
+        </div>
+        </div>
+    </section>
+ 
+    <!-- ============================================= -->
+    <!-- SERVICIOS -->
+    <!-- ============================================= -->
+    <section id="services" class="section-bg">
+      <div class="container">
+
+        <header class="section-header">
+          <h1 class="text-center fw-bold p-4">NUESTROS <span class="text-primary">SERVICIOS</span></h1>
+          <p class="text-center">Trabajamo de la mano con nuestros clientes para garantizar resultados efectivos y sostenibles.</p>
+        </header>
+
+        <div class="row mt-5">
+
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon" style="background: #fceef3;"><i class="ri-store-2-line" style="color: #ff689b;"></i></div>
+              <h4 class="title"><a href="">Ecommerce Para Sumercé</a></h4>
+              <p class="description">(PRÓXIMAMENTE) Plataforma de comercio electrónico en línea donde podrá vender y comprar los mejores productos de Boyacá.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon" style="background: #e1eeff;"><i class="ri-pages-line" style="color: #2282ff;"></i></div>
+              <h4 class="title"><a href="">Desarrollo Web</a></h4>
+              <p class="description">Creación de sitios web personalizados y funcionales para su empresa, diseñados para destacar su marca y atraer a su audiencia objetivo.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon" style="background: #e6fdfc;"><i class="ri-seo-line" style="color: #3fcdc7;"></i></div>
+              <h4 class="title"><a href="">Servicios de SEO</a></h4>
+              <p class="description">Mejora la visibilidad de su empresa, Atrae más clientes y aumente sus oportunidades de crecimiento.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- ECOMMERCE -->
+    <!-- ============================================= -->
+    <div id="carouselExampleDark" class="carousel slide" data-bs-ride="carousel">
          <div class="carousel-indicators">
              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
                  aria-current="true" aria-label="Slide 1"></button>
@@ -36,66 +110,6 @@
              <span class="visually-hidden">Next</span>
          </button>
      </div>
-    
-    <!-- ============================================= -->
-    <!-- NOSOTROS -->
-    <!-- ============================================= -->
-    <section class="text-center pt-4">
-        <div class="logo-img2 p-2">
-            <img src="/assets/img/logo2.png" alt="">
-        </div>
- 
-        <div class="w-50 mx-auto text-center" id="nosotros">
-            <p class="p-3 fs-4"><span>Es un <span class="text-primary"> sitio web de comercio electrónico en
-                         línea</span> que lo conecta con
-                     los mejores productos del departamento. Desde artículos artesanales y alimentos frescos hasta moda y
-                     tecnología, nuestra plataforma ofrece una amplia gama de productos de alta calidad directamente
-                     desde
-                     los productores locales. <span class="text-primary"> Para Sumercé</span> es la opción perfecta para
-                     quienes buscan productos auténticos y confiables.</span></p>
-         </div>
- 
-     </section>
- 
- 
-    <!-- ============================================= -->
-    <!-- SERVICIOS -->
-    <!-- ============================================= -->
-    <section class="container-fluid">
-        <h1 class="text-center fw-bold p-4">NUESTROS <span class="text-primary">SERVICIOS</span></h1>
-        <div class="img-servicios row row mx-auto g-4 p-5 servicio-fila">
-            <div class="col mb-4">
-                <div class="card h-100">
-                    <img src="/assets/img/venta-en-linea.png" class="card-img-top mx-auto mt-3" alt="Tienda online Para Sumercé">
-                    <div class="card-body d-flex flex-column justify-content-between">
-                        <h5 class="card-title">Tienda online Para Sumercé</h5>
-                        <p class="card-text">Plataforma de comercio electrónico en línea donde podrá vender y comprar los mejores productos del departamento de Boyacá y aportar a la economía del país.</p>
-                        <a href="#" class="btn btn-general">Ver más</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col mb-4">
-                <div class="card h-100">
-                    <img src="/assets/img/desarrollador.png" class="card-img-top mx-auto mt-3" alt="Creación páginas web">
-                    <div class="card-body d-flex flex-column justify-content-between">
-                        <h5 class="card-title">Desarrollo Web</h5>
-                        <p class="card-text">Creación de sitios web personalizados y funcionales para su empresa, diseñados para destacar su marca y atraer a su audiencia objetivo.</p>
-                        <a href="#" class="btn btn-general">Ver más</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col mb-4">
-                <div class="card h-100">
-                    <img src="/assets/img/anuncio.png" class="card-img-top mx-auto mt-3" alt="SEO">
-                    <div class="card-body d-flex flex-column justify-content-between">
-                        <h5 class="card-title">Servicio SEO</h5>
-                        <p class="card-text">Mejora la visibilidad de su empresa en nuestra plataforma y redes sociales con estrategias de marketing digital efectivas. Atrae más clientes y aumente sus oportunidades de crecimiento.</p>
-                        <a href="#" class="btn btn-general">Ver más</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
 
     <!-- ============================================= -->
@@ -151,5 +165,4 @@
             </div>
          </div>
       </footer>
- 
  </template>
