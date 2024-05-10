@@ -1,10 +1,35 @@
 <template>
  
-     <!-- ============================================= -->
-     <!-- Inicio -->
-     <!-- ============================================= -->
-     
-    
+    <!-- ============================================= -->
+    <!-- PRESENTACIÓN -->
+    <!-- ============================================= -->
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex align-items-center">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+                <h1>¿Te gustaría crear una comunidad con nosotros?</h1>
+                <h2>Siguenos en nuestras redes sociales</h2>
+                <div class="col-md-12">
+                     <ul class="social_icon-1">
+                        <li><a href="https://www.facebook.com/parasumerceboyaca"><i class="ri-facebook-circle-fill"></i></a></li>
+                        <li><a href="https://www.instagram.com/parasumerceboyaca/"><i class="ri-instagram-line"></i></a></li>
+                     </ul>
+                  </div>
+                <div class="d-flex justify-content-center justify-content-lg-start">
+                    <a href="https://forms.office.com/r/hUwM1fFYC5?origin=lprLink" class="btn-get-started scrollto">Realizar encuesta</a>
+                    <!-- <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox btn-watch-video"><i class="ri-play-circle-line"></i><span>Watch Video</span></a> -->
+                </div>
+                </div>
+                <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+                <img src="/assets/img/comunidad.png" class="img-fluid animated" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <!-- ============================================= -->
     <!-- NOSOTROS -->
     <!-- ============================================= -->
@@ -78,6 +103,8 @@
     <!-- ECOMMERCE -->
     <!-- ============================================= -->
     <div id="carouselExampleDark" class="carousel slide" data-bs-ride="carousel">
+        <h1 class="text-center fw-bold p-4">PRÓXIMAMENTE <span class="text-primary"> ECOMMERCE</span></h1>
+        <p class="text-center cta-text mb-5">Plataforma de comercio electrónico en línea donde podrá vender y comprar los mejores productos de Boyacá.</p>
          <div class="carousel-indicators">
              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
                  aria-current="true" aria-label="Slide 1"></button>
@@ -126,6 +153,79 @@
             <a class="cta-btn align-middle" href="https://forms.office.com/r/hUwM1fFYC5?origin=lprLink">Realizar encuesta</a>
           </div>
         </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================= -->
+    <!-- CONTACTO -->
+    <!-- ============================================= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2 class="text-center fw-bold p-4">CONTACTO</h2>
+          <p class="text-center">¡Contáctanos para más información! o envíanos un correo electrónico.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-5 d-flex align-items-stretch">
+            <div class="info">
+              <div class="address">
+                <i class="ri-map-pin-2-line"></i>
+                <h4>Ubicación:</h4>
+                <p>Tunja - Boyacá</p>
+              </div>
+
+              <div class="email">
+                <i class="ri-mail-send-line"></i>
+                <h4>Correo electrónico:</h4>
+                <p>parasumerceboyaca@outlook.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="ri-phone-line"></i>
+                <h4>Celular:</h4>
+                <p>+57 3001948159</p>
+              </div>
+
+              
+            </div>
+
+          </div>
+
+          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="name">Nombre</label>
+                  <input type="text" name="name" class="form-control" id="name" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="name">Correo</label>
+                  <input type="email" class="form-control" name="email" id="email" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="name">Asunto</label>
+                <input type="text" class="form-control" name="subject" id="subject" required>
+              </div>
+              <div class="form-group">
+                <label for="name">Mensaje</label>
+                <textarea class="form-control" name="message" rows="10" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Enviar</button></div>
+            </form>
+          </div>
+
+        </div>
+
       </div>
     </section>
 
