@@ -11,11 +11,11 @@
                     <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
                   </svg>
                 </div>
-                <form action="">
-                  <input type="text" name="" id="" class="form-control my-4 py-2" placeholder="Username" />
-                  <input type="text" name="" id="" class="form-control my-4 py-2" placeholder="Password" />
+                <form @submit.prevent="login">
+                  <input v-model="loginData.email" type="text" name="" id="" class="form-control my-4 py-2" placeholder="Username" />
+                  <input v-model="loginData.password" type="password" name="" id="" class="form-control my-4 py-2" placeholder="Password" />
                   <div class="text-center mt-3">
-                    <button class="btn btn-general">Login</button>
+                    <button class="btn btn-general">Iniciar sesión</button>
                     <router-link class="nav-link mt-4"  to="/signup"> No tienes cuenta? </router-link>
                   </div>
                 </form>
@@ -29,27 +29,61 @@
 </template>
 <script setup>
   import { reactive } from 'vue';
+  import { useFetch } from '@/composables/'
+  import { useRouter } from 'vue-router';
+  import Swal from 'sweetalert2'
+
+
+  const router = useRouter();
+
+  const baseUrl = import.meta.env.VITE_API_ENDPOINT;
 
   const loginData = reactive({
     email: '',
     password: ''
   });
 
-  const signupData = reactive({
-    name: '',
-    email: '',
-    password: ''
-  });
 
-  const login = () => {
-    // Perform login logic here
-    console.log('Login with:', loginData.email, loginData.password);
+
+  const login =  async () => {
+    (JSON.parse(JSON.stringify(loginData)))
+    if ( loginData.email === '' || loginData.password === '' ) {
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: 'Completa los campos',
+            timer: 2500
+            });
+        return;
+    }
+    const { data, error } = await useFetch(`${baseUrl}/login`, 'post', {'email': loginData.email , 'password': loginData.password })
+    ('data',data)
+    ('error',error)
+    if ( error && typeof(error) === 'string' ){
+      const detailError = JSON.parse(error);
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: detailError.detail,
+            timer: 2500
+            });
+        return;
+    }
+
+    Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "Has ingresado correctamente",
+            showConfirmButton: false,
+            timer: 1500
+        });
+    router.push({ name: 'home' });
+
+
+    
   };
 
-  const signup = () => {
-    // Perform signup logic here
-    console.log('Sign Up with:', signupData.name, signupData.email, signupData.password);
-  };
+
 </script>
 <style lang="">
     
