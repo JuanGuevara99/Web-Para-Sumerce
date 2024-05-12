@@ -1,4 +1,6 @@
 import Cookies from "js-cookie";
+import { storeToRefs } from 'pinia';
+import { useUserSession } from '@/store/userSession'
 
 
 export const setCookie = ({ cookieItemName, value }) => {
@@ -24,6 +26,25 @@ export const isMobile = () => {
 
 export const checkTokenExpiration = (token) =>{
     return isJwtExpired(token)
+}
+
+export const changeStateSessionUser = ( newState ) =>{
+  const store = useUserSession();
+  const {  changeSessionState } = store;
+  const { getUserSessionState } = storeToRefs(store);
+  changeSessionState(newState);
+  return getUserSessionState;
+  
+}
+
+
+export const changeUsernameState = ( newState ) =>{
+  const store = useUserSession();
+  const {  changeUsername } = store;
+  const { getUsername } = storeToRefs(store);
+  changeUsername(newState);
+  return getUsername;
+  
 }
 
 

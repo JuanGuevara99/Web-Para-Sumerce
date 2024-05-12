@@ -29,7 +29,7 @@
 </template>
 <script setup>
   import { reactive } from 'vue';
-  import { useFetch } from '@/composables/'
+  import { useFetch, changeStateSessionUser, changeUsernameState, isJsonString, setCookie } from '@/composables/'
   import { useRouter } from 'vue-router';
   import Swal from 'sweetalert2'
 
@@ -57,8 +57,6 @@
         return;
     }
     const { data, error } = await useFetch(`${baseUrl}/login`, 'post', {'email': loginData.email , 'password': loginData.password })
-    ('data',data)
-    ('error',error)
     if ( error && typeof(error) === 'string' ){
       const detailError = JSON.parse(error);
         Swal.fire({
@@ -70,6 +68,17 @@
         return;
     }
 
+    const responseData = isJsonString(data) ? JSON.parse(data) : '';
+
+    changeStateSessionUser(true);
+    changeUsernameState(responseData?.user?.username || 'usuario');
+
+    if ( responseData.token ) {
+      setCookie({ cookieItemName: 'usersession', value: responseData.token});
+      setCookie({ cookieItemName: 'username', value: responseData.user.username});
+    } 
+    router.push({ name: 'home' });
+    
     Swal.fire({
             position: "center",
             icon: "success",
@@ -77,8 +86,6 @@
             showConfirmButton: false,
             timer: 1500
         });
-    router.push({ name: 'home' });
-
 
     
   };

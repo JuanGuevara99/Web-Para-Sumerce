@@ -35,7 +35,7 @@
   </template>
 <script setup>
   import { ref, reactive } from 'vue';
-  import { useFetch } from '@/composables/'
+  import { useFetch, changeStateSessionUser } from '@/composables/'
   import Swal from 'sweetalert2'
   import { useRouter } from 'vue-router';
 
@@ -62,8 +62,6 @@
     }
     const username = `${signupData.email?.split('@')[0]}${Date.now()}`
     const { data, error } = await useFetch(`${baseUrl}/signup`, 'post', {'username': username, 'email': signupData.email , 'password': signupData.password })
-    ('data',data)
-    ('error')
 
     if ( error && typeof(error) === 'string' ){
         const detailError = JSON.parse(error);
@@ -83,6 +81,7 @@
             showConfirmButton: false,
             timer: 1500
         });
+    changeStateSessionUser(true);
     router.push({ name: 'home' });
 
   };

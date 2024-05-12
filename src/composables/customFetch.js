@@ -7,7 +7,6 @@ export function useFetch(url , method = 'GET', requestBody ) {
   const data = ref(null)
   const error = ref(null)
 
-  ('fetch', requestBody)
   const config = {
     method, // Adjust the HTTP method as needed
     url,
@@ -18,7 +17,7 @@ export function useFetch(url , method = 'GET', requestBody ) {
       'Access-Control-Allow-Origin': '*', 
     }
   };
-  const token = getCookie('session');
+  const token = getCookie('usersession');
   
   if ( token && !checkTokenExpiration(token) ){
     config['headers']['Authorization'] = `Bearer ${token}`;
@@ -30,8 +29,6 @@ export function useFetch(url , method = 'GET', requestBody ) {
         resolve({ data: data.value});
       })
       .catch((err) => {
-        ('test err', );
-        (err.response);
         if ( err.response.data ) resolve({error: err.response.data});
 
         resolve({error: err});
