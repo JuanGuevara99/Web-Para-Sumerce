@@ -74,6 +74,11 @@
         return;
     }
 
+    if ( responseData.token ) {
+      setCookie({ cookieItemName: 'usersession', value: responseData.token});
+      setCookie({ cookieItemName: 'username', value: responseData.user.username});
+    } 
+
     Swal.fire({
             position: "center",
             icon: "success",
@@ -82,6 +87,7 @@
             timer: 1500
         });
     changeStateSessionUser(true);
+    changeUsernameState(responseData?.user?.username || 'usuario');
     router.push({ name: 'home' });
 
   };
